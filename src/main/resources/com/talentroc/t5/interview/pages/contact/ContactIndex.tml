@@ -3,7 +3,7 @@
       xmlns:p="tapestry:parameter">
 <t:pagelink page="contact/contactedit" class="btn btn-default">Créer un contact</t:pagelink>
 <p>&nbsp;</p>
-<t:grid source="contacts" row="contact" exclude="id">
+<t:grid source="contacts" row="contact" t:exclude="id" t:add="edit, delete">
 	<p:editcell>
 	   <t:pagelink page="contact/contactedit" t:id="edit" context="contact">Edit</t:pagelink>
 	</p:editcell>
