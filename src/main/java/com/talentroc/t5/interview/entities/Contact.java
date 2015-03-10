@@ -9,6 +9,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 import org.apache.tapestry5.beaneditor.NonVisual;
+import org.apache.tapestry5.beaneditor.Validate;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -22,12 +23,15 @@ public class Contact implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Validate("maxLength=50")
     @Column(length = 50)
     private String firstName;
 
+    @Validate("required,minLength=3,maxLength=50")
     @Column(length = 50)
     private String lastName;
 
+    @Validate("required,regexp")
     @Column(length = 10)
     private String telephone;
 
