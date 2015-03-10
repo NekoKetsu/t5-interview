@@ -1,4 +1,10 @@
 <html t:type="layout" title="Create/Edit contact"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+<t:beaneditform t:id="contactForm" t:object="contact" t:class="Contact"	submitLabel="message:submit-label">
+	<t:TextField t:id="firstname" value="contact.firstname" />
+	<t:TextField t:id="lastname" value="contact.lastname" />
+	<t:TextField t:id="telephone" value="contact.telephone" />
+</t:beaneditform>
 </html>

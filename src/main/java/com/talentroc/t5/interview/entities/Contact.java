@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+
+import org.apache.tapestry5.beaneditor.NonVisual;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -41,6 +44,7 @@ public class Contact implements Serializable {
         return id;
     }
 
+    @NonVisual
     public void setId(final Long id) {
         this.id = id;
     }
