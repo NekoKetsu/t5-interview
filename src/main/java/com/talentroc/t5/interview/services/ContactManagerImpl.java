@@ -17,7 +17,14 @@ public class ContactManagerImpl implements ContactManager {
 
     @Override
     public void validate(final Contact contact) throws BusinessException {
-        // TODO - Ecrire le code de validation du contact.
+        if(contact.getFirstName().length() > 50)
+        	throw new BusinessException("The First Name must be 50 characters max");
+        
+        if(contact.getLastName().length() > 50 || contact.getLastName().length() < 3 )
+        	throw new BusinessException("The Last Name must be between 3 and 50 characters");
+        
+        if(contact.getTelephone().length() != 10  || !contact.getTelephone().matches("\\d{10}") )
+        	throw new BusinessException("The Telephone must be 10 numbers");
     }
 
     @Override
