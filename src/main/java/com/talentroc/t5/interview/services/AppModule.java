@@ -50,6 +50,7 @@ public class AppModule {
         // FactoryDefaults (with the same key).
         configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en");
         configuration.add(SymbolConstants.JAVASCRIPT_INFRASTRUCTURE_PROVIDER, "jquery");
+        configuration.add(SymbolConstants.HMAC_PASSPHRASE, "LJgGLcqmVxeLhhCRYH0L");
     }
 
 
